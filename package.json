@@ -19,7 +19,8 @@
     "url": "https://github.com/cilla123/happy-utils/issues"
   },
   "homepage": "https://github.com/cilla123/happy-utils#readme",
-  "devDependencies": {
-
+  "dependencies": {
+    "big.js": "^5.0.3",
+    "lodash": "^4.17.5"
   }
 }
