@@ -3,7 +3,7 @@ const {
     accDiv,
     accMul,
     accSub,
-} = require('../src/number')
+} = require('../number')
 
 // 加
 console.log(accAdd(0.1, 0.2))

@@ -1,5 +1,5 @@
-const dateUtils = require('./src/date')
-const stringUtils = require('./src/string')
+const dateUtils = require('./date')
+const stringUtils = require('./string')
 
 module.exports = {
     dateUtils,

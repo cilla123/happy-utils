@@ -8,7 +8,7 @@ const {
     mapKeysToSnakeCase,
     toSnakeCase,
     getUnescapeText,
-} = require('../src/string')
+} = require('../string')
 
 // 数字小于10前面自动添加0
 console.log(addZero(5))

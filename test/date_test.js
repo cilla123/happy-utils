@@ -1,4 +1,4 @@
-const { isSameDay, getCurrentDay, dateFormat, getTimestamp, getCurrentWeek, getBeforeDate } = require('../src/date')
+const { isSameDay, getCurrentDay, dateFormat, getTimestamp, getCurrentWeek, getBeforeDate } = require('../date')
 
 const d1 = new Date('2017-08-12')
 const d2 = new Date('2017-08-11')
