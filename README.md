@@ -4,14 +4,14 @@
 ### happy-utils的定位是一个共用函数库，提取出大部分业务需要的共用的函数。
 ---------------------------------------------------------------
 
-```
+```js
 npm install --save happy-utils
 ```
 
 ### 使用
 使用方法类似于lodash，需要使用哪个函数，只引用当前函数。
 
-```
+```js
 const { getCurrentDay } = require('happy-utils/date')
 或
 const hu = require('happy-utils')
