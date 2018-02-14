@@ -1,6 +1,6 @@
 {
   "name": "happy-utils",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "共用函数库，提取出大部分业务需要的共用的函数。",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "url": "git+https://github.com/cilla123/happy-utils.git"
   },
   "keywords": [
-    "公共", "业务", "常用业务方法", "精度计算", "日期", "金钱"
+    "公共", "业务", "常用业务方法", "精度计算", "日期", "金钱", "正则表达式", "正则",
+    "价格保留2位小数", "url", "获取url参数", "修改url参数"
   ],
   "author": "Ben",
   "license": "MIT",
