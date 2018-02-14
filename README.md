@@ -22,8 +22,13 @@ dateUtils.getCurrentDay()
 ```
 
 ### 模块
-目前有3个模块：
+目前有6个模块：
 
 - 1.date与日期相关的函数
 - 2.string与字符串相关的函数
 - 3.number与数字计算相关的函数
+- 4.money与金钱相关的函数
+- 5.url与URL相关的函数
+- 6.validate与校验相关的函数
+
+如果需要其他的函数，请联系ddanlife@163.com添加，最好可以直接提PR。
