@@ -32,3 +32,5 @@ dateUtils.getCurrentDay()
 - 6.validate与校验相关的函数
 
 如果需要其他的函数，请联系ddanlife@163.com添加，最好可以直接提PR。
+
+## 如果觉得好用，请在github star 和fork，github地址： [https://github.com/cilla123/happy-utils](https://github.com/cilla123/happy-utils) 
