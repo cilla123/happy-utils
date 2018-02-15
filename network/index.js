@@ -14,6 +14,7 @@ function download(href, title) {
     a.click();
 }
 
+
 module.exports = {
     download
 }

@@ -4,6 +4,9 @@ const numberUtils = require('./number')
 const urlUtils = require('./url')
 const validateUtils = require('./validate')
 const moneyUtils = require('./money')
+const deviceUtils = require('./device')
+const networkUtils = require('./network')
+const storageUtils = require('./storage')
 
 module.exports = {
     dateUtils,
@@ -12,4 +15,7 @@ module.exports = {
     urlUtils,
     moneyUtils,
     validateUtils,
+    deviceUtils,
+    networkUtils,
+    storageUtils,
 }

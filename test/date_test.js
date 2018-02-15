@@ -1,4 +1,13 @@
-const { isSameDay, getCurrentDay, dateFormat, getTimestamp, getCurrentWeek, getBeforeDate } = require('../date')
+const {
+    isSameDay,
+    getCurrentDay,
+    dateFormat,
+    getTimestamp,
+    getCurrentWeek,
+    getBeforeDate,
+    formatWeek,
+    formatTimes,
+} = require('../date')
 
 const d1 = new Date('2017-08-12')
 const d2 = new Date('2017-08-11')
@@ -31,3 +40,14 @@ console.log(currentWeek)
 const beforeDate = getBeforeDate(100)
 console.log(beforeDate)
 
+// 格式化周几到周几
+const weeks1 = [1, 5, 6, 7]
+const weeks2 = [1, 2, 3, 5, 6, 7]
+console.log(formatWeek(weeks1))
+console.log(formatWeek(weeks2))
+
+// 格式化几点到几点
+const times1 = [{ "startTime": "08:00", "endTime": "20:00" }]
+const times2 = [{ "startTime": "08:00", "endTime": "20:00" }, { "startTime": "07:00", "endTime": "21:00" }]
+console.log(formatTimes(times1))
+console.log(formatTimes(times2))

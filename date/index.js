@@ -132,6 +132,95 @@ function getBeforeDate(num){
     return s
 }
 
+/**
+ * 格式化周几到周几
+ * @param {Array} data 
+ * @runkit true
+ * @example
+ * const { formatWeek } = require('happy-utils/date')
+ * formatWeek([1,2,3,4,5,6]);
+ * // => "周一至周六"
+ * formatWeek([1,2,4,5,6]);
+ * // => "周一、周二、周四至周六"
+ * formatWeek([1,2,3,,6, 7]);
+ * // => "周一至周三、周六、周日"
+ */
+function formatWeek(data) {
+    let flag, midArray, newArray = [], string = ''
+    const array = data.sort((a, b) => { return a - b })
+    const weekStringArr = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+
+    array.map((v) => {
+        if (flag === parseInt(v)) {
+            midArray.push(flag)
+            flag++
+            return
+        }
+        midArray = [parseInt(v)]
+        flag = parseInt(v) + 1
+        newArray.push(midArray)
+    })
+
+    for (var value of newArray) {
+        if (value.length >= 3) {
+            string += weekStringArr[value[0] - 1] + '至' + weekStringArr[value[value.length - 1] - 1] + '、'
+        } else if (value.length == 2) {
+            string += weekStringArr[value[0] - 1] + '、' + weekStringArr[value[1] - 1] + '、'
+        } else if (value.length == 1) {
+            string += weekStringArr[value[0] - 1] + '、'
+        }
+    }
+
+    return string.substr(0, string.length - 1)
+}
+
+/**
+ * 格式化时间，几点到几点
+ * @param {Array} data 
+ * @runkit true
+ * @example
+ * const { formatTimes } = require('happy-utils/date')
+ * formatTimes([{"startTime":"08:00","endTime":"20:00"}]);
+ * // => "08:00至20:00"
+ * formatTimes([{"startTime":"08:00","endTime":"20:00"}, {"startTime":"07:00","endTime":"21:00"}]);
+ * // => "08:00至20:00、07:00至21:00"
+ */
+function formatTimes(data) {
+    let string = '';
+    for (var i = 0; i < data.length; i++) {
+        string += data[i].startTime + '至' + data[i].endTime + '、';
+    }
+    return string.substr(0, string.length - 1);
+}
+
+/**
+ * 格式化距现在的已过时间
+ * @param  {Date} startTime 
+ * @return {String}
+ * @runkit true
+ * @example
+ * const { formatPassTime } = require('happy-utils/date')
+ * formatPassTime(new Date());
+ * // => "刚刚"
+ * formatPassTime(new Date('2016-07-01'));
+ * // => "1年前"
+ */
+function formatPassTime(startTime) {
+    const currentTime = Date.parse(new Date()),
+        time = currentTime - startTime,
+        day = parseInt(time / (1000 * 60 * 60 * 24)),
+        hour = parseInt(time / (1000 * 60 * 60)),
+        min = parseInt(time / (1000 * 60)),
+        month = parseInt(day / 30),
+        year = parseInt(month / 12);
+    if (year) return year + "年前"
+    if (month) return month + "个月前"
+    if (day) return day + "天前"
+    if (hour) return hour + "小时前"
+    if (min) return min + "分钟前"
+    else return '刚刚'
+}
+
 module.exports = {
     zh,
     en,
@@ -140,5 +229,7 @@ module.exports = {
     dateFormat,
     getTimestamp,
     getCurrentWeek,
-    getBeforeDate
+    getBeforeDate,
+    formatWeek,
+    formatTimes,
 }
