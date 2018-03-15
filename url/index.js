@@ -133,4 +133,5 @@ module.exports = {
     obj2UrlString,
     addParameter,
     fullUrl,
+    changeBrowserUrlParameter,
 }

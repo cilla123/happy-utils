@@ -7,6 +7,7 @@ const moneyUtils = require('./money')
 const deviceUtils = require('./device')
 const networkUtils = require('./network')
 const storageUtils = require('./storage')
+const mapUtils = require('./map')
 
 module.exports = {
     dateUtils,
@@ -18,4 +19,5 @@ module.exports = {
     deviceUtils,
     networkUtils,
     storageUtils,
+    mapUtils
 }
