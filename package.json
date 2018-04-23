@@ -2,18 +2,39 @@
   "name": "happy-utils",
   "version": "1.2.1",
   "description": "共用函数库，提取出大部分业务需要的共用的函数。",
-  "main": "index.js",
+  "main": "dist/index.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cilla123/happy-utils.git"
   },
   "keywords": [
-    "公共", "业务", "常用业务方法", "精度计算", "日期", "金钱", "正则表达式", "正则",
-    "价格保留2位小数", "url", "获取url参数", "修改url参数", "设备", "是否微信", "周几到周几",
-    "营业时间转换", "存储", "本地存储", "cookie", "下载", "地图坐标转换", "手机定位", "定位",
+    "公共",
+    "业务",
+    "常用业务方法",
+    "精度计算",
+    "日期",
+    "金钱",
+    "正则表达式",
+    "正则",
+    "价格保留2位小数",
+    "url",
+    "获取url参数",
+    "修改url参数",
+    "设备",
+    "是否微信",
+    "周几到周几",
+    "营业时间转换",
+    "存储",
+    "本地存储",
+    "cookie",
+    "下载",
+    "地图坐标转换",
+    "手机定位",
+    "定位",
     "精确定位"
   ],
   "author": "Ben",
@@ -25,5 +46,12 @@
   "dependencies": {
     "big.js": "^5.0.3",
     "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^2.6.1"
   }
 }
