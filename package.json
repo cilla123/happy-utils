@@ -1,11 +1,10 @@
 {
   "name": "happy-utils",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "共用函数库，提取出大部分业务需要的共用的函数。",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

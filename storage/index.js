@@ -52,6 +52,7 @@ function getCookie(name) {
 module.exports = {
     setLocalData,
     getLocalData,
+    setCookie,
     removeCookie,
     getCookie,
 }
