@@ -49,10 +49,29 @@ function getCookie(name) {
     return ''
 }
 
+/**
+ * 获取服务器的cookie
+ */
+function getServerCookie(cookie, key){
+  let result = ''
+  if (cookie) {
+    cookie = cookie.split(';')
+    cookie.map(item => {
+      item = item.trim()
+      const cookieItem = item.split('=')
+      if (key === cookieItem[0]) {
+        result = cookieItem[1]
+      }
+    })
+  }
+  return result
+}
+
 module.exports = {
     setLocalData,
     getLocalData,
     setCookie,
     removeCookie,
     getCookie,
+    getServerCookie
 }
