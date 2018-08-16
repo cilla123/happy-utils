@@ -399,15 +399,6 @@ dateUtils.getCurrentDay()
 
 #### 3.10：[map地图](https://github.com/cilla123/happy-utils/blob/master/map/index.js) 
 
-#### 3.11：[other其它](https://github.com/cilla123/happy-utils/blob/master/other/index.js) 
-
-##### setTitle(title): 动态设置标题
-
-| 参数   | 说明 |  类型  | 可选值 | 默认值 |
-| :----: | :----: | :----: |:---- |:----: |
-| key | 键 | string |  |  |
-| value | 值 | string |  |  |
-
 ##### 此方法较为特殊，调用方法如下
 
 ```js
@@ -416,6 +407,14 @@ const { MapTransformer } = require('happy-utils/map')
 const lnglat = MapTransformer.gpsToGcj(lng, lat)
 cosnt lnglatXY = MapTransformer.gpsToBaidu(lng, lat)
 ```
+
+#### 3.11：[other其它](https://github.com/cilla123/happy-utils/blob/master/other/index.js) 
+
+##### setTitle(title): 动态设置标题
+
+| 参数   | 说明 |  类型  | 可选值 | 默认值 |
+| :----: | :----: | :----: |:---- |:----: |
+| title | 标题 | string |  |  |
 
 ---
 
