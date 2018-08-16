@@ -8,6 +8,7 @@ const deviceUtils = require('./device')
 const networkUtils = require('./network')
 const storageUtils = require('./storage')
 const mapUtils = require('./map')
+const otherUtils = require('./other')
 
 module.exports = {
     dateUtils,
@@ -19,5 +20,6 @@ module.exports = {
     deviceUtils,
     networkUtils,
     storageUtils,
-    mapUtils
+    mapUtils,
+    otherUtils
 }
