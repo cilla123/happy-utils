@@ -242,7 +242,6 @@ dateUtils.getCurrentDay()
 | 参数   | 说明 |  类型  | 可选值 | 默认值 |
 | :----: | :----: | :----: |:---- |:----: |
 | name | 键 | string |  |  |
-| url | 地址 | string | | |
 
 ##### removeParameter(url, parameter): 删除url的参数
 

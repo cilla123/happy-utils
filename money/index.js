@@ -106,6 +106,27 @@ function toCent(amount) {
 }
 
 /**
+ * 强制保留2位小数， 不足2位自动补0
+ */
+function toDecimal2(x) {
+    var f = parseFloat(x);
+    if (isNaN(f)) {
+        return false;
+    }
+    var f = Math.round(x * 100) / 100;
+    var s = f.toString();
+    var rs = s.indexOf('.');
+    if (rs < 0) {
+        rs = s.length;
+        s += '.';
+    }
+    while (s.length <= rs + 2) {
+        s += '0';
+    }
+    return s;
+}
+
+/**
   * tozhCN 把字符串转成以分为单位的整数。
   * @param {number|string} num 金额
   * @returns {string} 中文大写的金额, 标准会计格式
@@ -142,5 +163,6 @@ module.exports = {
     minus,
     multiply,
     toCent,
+    toDecimal2,
     tozhCN,
 }

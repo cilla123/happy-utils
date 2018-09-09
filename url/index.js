@@ -1,18 +1,14 @@
 /**
  * 获取url的参数
- * @param {键} name 
- * @param {地址} url 
+ * @param {键} name
  * @returns 对应的键的值
  * @example
  * const { getParameterByName } = require('happy-utils/url')
- * getParameterByName("http://www.ddanlife.com?&ben=123&ken=sss", "ben");
+ * getParameterByName("ben");
  * // "123"
  */
-function getParameterByName(name, url) {
-    name = name.replace(/[[]/, '\\[').replace(/[]]/, '\\]')
-    url = url ? '?' + url.split('#')[0].split('?')[1] : window.location.search
-    const results = RegExp('[?&]' + name + '=([^&#]*)').exec(url)
-    return results ? decodeURIComponent(results[1].replace(/\+/g, ' ')) : ''
+function getParameterByName(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [, ""])[1].replace(/\+/g, '%20')) || null;    
 }
 
 /**
@@ -125,7 +121,6 @@ function changeBrowserUrlParameter(obj){
     const url = addParameter(window.location.href, obj)
     window.history.pushState('', '', url);
 }
-
 
 module.exports = {
     getParameterByName,
