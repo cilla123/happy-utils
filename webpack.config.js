@@ -7,7 +7,7 @@ function resolve(dir) {
 }
 
 // 输出的路径
-var assetsRoot = path.resolve(__dirname, './dist');
+var assetsRoot = path.resolve(__dirname, './');
 
 module.exports = {
     entry: {
@@ -15,7 +15,8 @@ module.exports = {
     },
     output: {
         path: assetsRoot,
-        filename: 'index.min.js'
+        filename: 'index.js',
+        libraryTarget: 'commonjs'
     },
     module: {
         rules: [{

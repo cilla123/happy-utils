@@ -1,10 +1,11 @@
 {
   "name": "happy-utils",
-  "version": "1.3.0",
+  "version": "1.3.7",
   "description": "共用函数库，提取出大部分业务需要的共用的函数。",
-  "main": "index.js",
+  "main": "./dist/index.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist/ && webpack -p --config webpack.config.js --colors --progress"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
-    "webpack": "^2.6.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^3.5.4"
   }
 }
