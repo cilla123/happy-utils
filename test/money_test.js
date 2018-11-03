@@ -33,7 +33,7 @@ console.log(toCent(1))
 console.log(tozhCN(23012030.22))
 
 // 转元
-console.log(toYuan(1000))
+console.log(toYuan(12))
 
 
 

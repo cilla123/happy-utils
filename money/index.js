@@ -118,7 +118,8 @@ function toCent(amount) {
  * // => 1.00
  */
 function toYuan(cent){
-    return toDecimal2(accDiv(cent, 100))
+    cent = Number(cent)
+    return cent ? toDecimal2(accDiv(cent, 100)) : '0.00'
 }
 
 /**
