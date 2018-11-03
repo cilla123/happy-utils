@@ -6,6 +6,7 @@ const {
     multiply,
     toCent,
     tozhCN,
+    toYuan
 } = require('../money')
 
 // 给大数字添加逗号分隔符
@@ -30,6 +31,9 @@ console.log(toCent(1))
 
 // 转中文
 console.log(tozhCN(23012030.22))
+
+// 转元
+console.log(toYuan(1000))
 
 
 

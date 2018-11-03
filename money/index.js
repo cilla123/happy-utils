@@ -1,3 +1,5 @@
+const {accDiv} = require('../number')
+
 /**
  * 给大数字添加逗号分隔符
  * @param {number} value  待格式化的值
@@ -106,6 +108,20 @@ function toCent(amount) {
 }
 
 /**
+ * toYuan 把字符串转成以元为单位的整数。
+ * @param  {string} amount
+ * @returns {number}
+ * @runkit true
+ * @example
+ * const { toYuan } = require('happy-utils/money')
+ * toYuan('1000');
+ * // => 1.00
+ */
+function toYuan(cent){
+    return toDecimal2(accDiv(cent, 100))
+}
+
+/**
  * 强制保留2位小数， 不足2位自动补0
  */
 function toDecimal2(x) {
@@ -163,6 +179,7 @@ module.exports = {
     minus,
     multiply,
     toCent,
+    toYuan,
     toDecimal2,
     tozhCN,
 }
